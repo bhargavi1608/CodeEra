@@ -1,0 +1,102 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 100%; /* Full height */
+}
+
+/* Create a flex container for the entire page */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('loginbackground.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; 
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #ff7200;
+    color: white;
+    padding: 1rem 0;
+}
+
+/* Header text styling */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Main content should take up all remaining space */
+main {
+    flex: 1; /* Fills available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cheat sheet container styling */
+.cheat-sheet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* Individual cheat sheet styling */
+.cheat-sheet {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+}
+
+.cheat-sheet h2 {
+    font-size: 1.5rem;
+    color: #ff7200;
+}
+
+.cheat-sheet p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.cheat-sheet a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7200;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cheat-sheet a:hover {
+    background-color:#ff7200;
+}
+
+/* Footer at the bottom */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}

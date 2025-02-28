@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="assignment.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Assignments Section -->
+    <div class="assignments">
+        <h3>Assignments</h3>
+        <p>Complete the following coding tasks to practice and improve your skills:</p>
+        <ul>
+            <li><strong>Assignment 1:</strong> Write a JavaScript function that reverses a string.</li>
+            <li><strong>Assignment 2:</strong> Create a JavaScript program that checks if a number is prime.</li>
+            <li><strong>Assignment 3:</strong> Write a JavaScript function to calculate the factorial of a number.</li>
+        </ul>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result">
+        Your score is: <span id="score"></span>
+    </div>
+
+    <!-- Button Section -->
+    <div class="button">
+        <button onclick="checkAnswers()">Submit</button>
+    </div>
+
+    <script>
+        // Function to check answers
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "B", // Correct answer for Question 1
+                q2: "C", // Correct answer for Question 2
+                q3: "A"  // Correct answer for Question 3
+            };
+
+            let score = 0;
+
+            // Check if the selected answers are correct
+            for (let question in correctAnswers) {
+                const selectedAnswer = document.querySelector(`input[name=${question}]:checked`);
+                
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            // Display the score
+            document.getElementById('score').textContent = score;
+
+            // Show the result
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

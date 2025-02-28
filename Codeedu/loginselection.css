@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Background Image */
+    background-image: url('loginbackground.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image on the screen */
+}
+
+/* Centered Box */
+.box {
+    background-color: #fff;
+    padding: 60px 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 200px;
+}
+
+.box h2 {
+    color: #ff7200;
+    margin-bottom: 20px;
+}
+
+/* Buttons Inside the Box */
+.btn {
+    background-color: #ff7200;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #e86500;
+}
+
+/* Hidden Login Sections */
+.login-container {
+    display: none;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    color: #ff7200;
+}
+
+.login-btn {
+    background-color: #ff7200;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #e86500;
+}

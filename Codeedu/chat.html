@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML, CSS, and JavaScript FAQ Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      background-image: url('loginbackground.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image on the screen */
+
+    }
+
+    .chat-container {
+      max-width: 600px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #ff7200;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: #f1f1f1;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .message.user {
+      background: #d1ffd1;
+      align-self: flex-end;
+    }
+
+    .message.bot {
+      background: #f1f1f1;
+      align-self: flex-start;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .chat-input input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+      font-size: 1em;
+    }
+
+    .chat-input button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background: #ff7200;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .chat-input button:hover {
+      background: #ff7200;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">JavaScript, HTML, and CSS Chat</div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="message bot">Hi! Ask me anything about JavaScript, HTML, or CSS.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Type your question here...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const predefinedAnswers = {
+      // HTML Questions
+      "what is html": "HTML stands for HyperText Markup Language. It is used to structure content on the web.",
+      "how to create a hyperlink in html": "Use the `<a>` tag: `<a href='https://example.com'>Link text</a>`.",
+      "what is semantic html": "Semantic HTML refers to HTML5 elements like `<article>`, `<header>`, and `<footer>` that have meaningful names describing their purpose.",
+      "how to create a table in html": "Use the `<table>` tag with `<tr>` for rows and `<td>` for cells. Example:\n`<table><tr><td>Cell 1</td><td>Cell 2</td></tr></table>`.",
+      
+      // CSS Questions
+      "what is css": "CSS stands for Cascading Style Sheets. It is used to style and layout web pages.",
+      "how to center a div in css": "You can center a `div` using CSS with `margin: auto` or by using Flexbox:\n`display: flex; justify-content: center; align-items: center;`.",
+      "what is flexbox": "Flexbox is a CSS layout module that makes it easier to design flexible responsive layout structures.",
+      "how to change font color in css": "Use the `color` property in CSS. Example: `color: red;`.",
+      "what is css grid": "CSS Grid is a layout system optimized for two-dimensional layouts using rows and columns. Example: `display: grid; grid-template-columns: auto auto;`.",
+      
+      // JavaScript Questions
+      "what is javascript": "JavaScript is a programming language used to create interactive and dynamic content on websites.",
+      "how to declare a variable in javascript": "Use `var`, `let`, or `const` depending on the scope and mutability. Example: `let name = 'John';`.",
+      "what is a function in javascript": "A function is a block of code designed to perform a task. Example:\n`function greet() { console.log('Hello!'); }`.",
+      "how to create an array in javascript": "Use square brackets. Example: `let fruits = ['apple', 'banana', 'orange'];`.",
+      "what is dom": "DOM stands for Document Object Model. It represents the structure of an HTML document as a tree of objects that can be manipulated using JavaScript.",
+      "how to add an event listener in javascript": "Use `addEventListener`. Example:\n`element.addEventListener('click', function() { alert('Clicked!'); });`.",
+      "what is a promise in javascript": "A Promise is an object that represents a value which may be available now, or in the future, or never. Example:\n`new Promise((resolve, reject) => { resolve('Success!'); });`.",
+      
+      // Default fallback
+      "default": "I'm sorry, I don't have an answer for that question. Try asking something else about HTML, CSS, or JavaScript."
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("chat-input");
+      const userMessageText = input.value.trim().toLowerCase();
+      const messagesContainer = document.getElementById("chat-messages");
+
+      if (userMessageText === "") return;
+
+      // Display user's message
+      const userMessage = document.createElement("div");
+      userMessage.className = "message user";
+      userMessage.textContent = input.value;
+      messagesContainer.appendChild(userMessage);
+
+      // Generate bot response
+      const botMessage = document.createElement("div");
+      botMessage.className = "message bot";
+
+      botMessage.textContent = predefinedAnswers[userMessageText] || predefinedAnswers["default"];
+
+      messagesContainer.appendChild(botMessage);
+
+      // Clear the input and scroll to the bottom
+      input.value = "";
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  </script>
+</body>
+</html>

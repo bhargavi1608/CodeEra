@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <link rel="stylesheet" href="loginselection.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Select Your Role</h2>
+        <button type="button" class="btn" id="studentBtn"onclick="window.location.href='loginpage.html';">Student</button>
+        <button type="button" class="btn" id="facultyBtn" onclick="window.location.href='loginpage.html';">Faculty</button>
+        <!-- <button class="btn" id="studentBtn">Student</button>
+        <button class="btn" id="facultyBtn">Faculty</button> -->
+    </div>
+
+    <!-- Hidden Login Sections -->
+    <div class="login-container" id="studentLogin">
+        <h2>Student Login</h2>
+        <button class="login-btn">Login</button>
+    </div>
+    <div class="login-container" id="facultyLogin">
+        <h2>Faculty Login</h2>
+        <button class="login-btn">Login</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

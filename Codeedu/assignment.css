@@ -1,0 +1,99 @@
+/* Basic styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Background Image */
+    background-image: url('loginbackground.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image on the screen */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.question {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.question label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button styling */
+.button {
+    margin: 0;
+    text-align: center;
+    margin-top: 500px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button button {
+    color: white;
+    background-color: #ff7200;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button button:hover {
+    background-color: #ff7200;
+}
+
+/* Result section styling */
+#result {
+    display: none;
+    text-align: center;
+    margin-top: 500px;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Assignments section styling */
+.assignments {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assignments h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.assignments p {
+    font-size: 1.1rem;
+    color: #555;
+}
